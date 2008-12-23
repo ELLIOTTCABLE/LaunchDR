@@ -21,6 +21,7 @@ begin
       g.email = ['LaunchDoctor@elliottcable.com']
       g.summary = "One stop shop for launchd property list creation. The doctor is *in*!"
       g.url = 'http://github.com/elliottcable/launchdr'
+      g.dependencies = ['kballard-osx-plist', 'facets']
       g.development_dependencies = ['elliottcable-echoe >= 3.0.2']
       g.manifest_name = '.manifest' # I don't want this showing up <,<
       g.retain_gemspec = true # perfect for GitHub
