@@ -1,6 +1,6 @@
 module LaunchDr
   
-  def task name = :launchd, opts = {}
+  def self.task name = :launchd, opts = {}
     raise "`LaunchDr.task`'s options must include the name of the binary for your gem!" unless opts[:bin]
     opts = {:desc => 'Creates a launchd property list for this gem', :arguments => []}.merge opts
     

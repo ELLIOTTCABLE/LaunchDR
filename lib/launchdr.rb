@@ -6,12 +6,10 @@ def LaunchDr label, opts = {}
   LaunchDr.create label, opts, &Proc.new
 end
 module LaunchDr
-  extend self
-  
   Version = 0
   Options = Hash.new
   
-  def create label, opts = {}
+  def self.create label, opts = {}
     plist = Launchd.new label
     
     yield plist if block_given?
@@ -25,11 +23,11 @@ module LaunchDr
     plist.load!
   end
   
-  def allow_system_agents!
+  def self.allow_system_agents!
     Options[:system_agents_allowed] = true
   end
   
-  def allow_system_daemons!
+  def self.allow_system_daemons!
     raise "You must allow System-owned agents to allow System-owned daemons!" unless Options[:system_agents_allowed]
     Options[:system_daemon_allowed] = true
   end
