@@ -14,6 +14,7 @@ module LaunchDr
           plist[:keep_alive] = true
           plist[:run_at_load] = true
         end
+        puts "** `#{[opts[:bin], opts[:arguments]].flatten.join(' ')}` will now be run on startup!"
       end
 
     end
