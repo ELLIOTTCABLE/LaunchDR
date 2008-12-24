@@ -6,9 +6,9 @@ module LaunchDoctor
   class PropertyList
     attr_reader :elements
   
-    def initialize id = nil, elements = {}
+    def initialize label = nil, elements = {}
       @elements = elements
-      @elements[:label] = id || "rb.launchdr.#{UUID.new.generate}"
+      @elements['Label'] = label || "rb.launchdr.#{UUID.new.generate}"
     end
   
     def [] key
