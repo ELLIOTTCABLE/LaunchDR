@@ -16,8 +16,7 @@ begin
   task :manifest => :'package:manifest'
   task :clobber => :'package:clobber'
   namespace :package do
-    Echoe.new('launchdr', LaunchDoctor::Version) do |g|; g.name = 'LaunchDoctor'
-      g.project = 'launchdr'
+    Echoe.new('launchdr', LaunchDoctor::Version) do |g|
       g.author = ['elliottcable']
       g.email = ['LaunchDoctor@elliottcable.com']
       g.summary = "One stop shop for launchd property list creation. The doctor is *in*!"
