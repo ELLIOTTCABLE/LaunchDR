@@ -49,7 +49,7 @@ wraps the last method inside a rake task. This method is really great if you
 want to provide a way to let users make your gem's binary run all the time:
     
     require 'launchdr/task'
-    LaunchDr.task :launchd, :bin => 'jello', :arguments => ['-D', 'shortener', 'grabup']
+    LaunchDr::Task.new :launchd, :bin => 'jello', :arguments => ['-D', 'shortener', 'grabup']
     
 This isn't very flexible, but it's not very complicated either. If you need
 more control over the plist, just use the second method inside a `task` block.
