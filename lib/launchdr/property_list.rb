@@ -23,8 +23,10 @@ module LaunchDoctor
       @elements.to_plist
     end
   
-    def dump filename
-      OSX::PropertyList.dump File.new(filename, 'w+'), @elements
+    def dump path
+      out = File.new(File.expand_path(File.join(path, @elements['Label'] + '.plist')), 'w+')
+      OSX::PropertyList.dump out, @elements
+      out.close
     end
   
     def self.load filename
