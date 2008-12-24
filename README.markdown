@@ -7,7 +7,7 @@ I've got a PhD in [launchd][], and I'm not afraid to use it!
 Usage
 -----
 LaunchDoctor is really simple. It is essentially an easy interface to
-[launchd][]'s [property List][plist] files.
+[launchd][]'s [property list][plist] files.
 
 There are two ways to use LaunchDoctor - the simplest being directly
 creating property lists and treating them as hashes:
