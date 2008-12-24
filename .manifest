@@ -1,6 +1,6 @@
 lib/launchdr/launchd.rb
 lib/launchdr/property_list.rb
-lib/launchdr/tasks.rb
+lib/launchdr/task.rb
 lib/launchdr.rb
 Rakefile.rb
 README.markdown
