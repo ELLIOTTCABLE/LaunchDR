@@ -7,7 +7,7 @@ module LaunchDr
 
       desc opts[:desc] unless opts[:no_desc]
       task name do
-        LaunchDr label do |plist|
+        LaunchDr "rb.launchdr.#{opts[:bin]}" do |plist|
           plist[:program_arguments] = [File.join('/usr/local/bin', opts[:bin]), opts[:arguments]].flatten
           plist[:keep_alive] = true
           plist[:run_at_load] = true
