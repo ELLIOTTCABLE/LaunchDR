@@ -18,7 +18,7 @@ module LaunchDoctor
     
     raise "You must run as a root user and allow_system_agents! if you wish to preform the dangerous act of writing to #{Launchd::Paths[:system_agent]}!" unless !(opts[:type] == :system_agent) or Options[:system_agents_allowed]
     raise "You must run as a root user, allow_system_agents!, *and* allow_system_daemons! if you wish to preform the very dangerous act of writing to #{Launchd::Paths[:system_daemon]}!" unless !(opts[:type] == :system_daemon) or Options[:system_daemon_allowed]
-    path = Launchd::Paths[opts[:type]]
+    path = Launchd::Paths[opts[:type] || :user_agent]
     raise "Type error! Must be one of #{Launchd::Paths.keys.join(", ")}" unless path
     
     plist.dump File.expand_path(path)

@@ -21,14 +21,15 @@ The second is to use the common block idiom, provided by the `LaunchDoctor()`
 method:
     
     require 'launchdr'
-    LaunchDoctor "name.elliottcable.launchdr.test", :type => :user_agent do |plist|
+    LaunchDoctor "name.elliottcable.launchdr.test" do |plist|
       plist[:program_arguments] = ['/Applications/Calculator.app/Contents/MacOS/Calculator']
     end
     
 LaunchDoctor can write (`dump`) the property lists to any place on your disk,
 but the idiom method assumes you're going to want to use one of the
 directories that launchd checks for property lists. These are stored in the
-`Launchd::Paths` array.
+`Launchd::Paths` array. The default is to place it in the user-owned agents
+directory at `~/Library/LaunchAgents`.
 
 LaunchDoctor also preforms some 'prettification' on the keys provided by
 launchd's property list structure. All of the keys on the
