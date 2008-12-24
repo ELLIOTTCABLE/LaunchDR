@@ -9,8 +9,8 @@ Gem::Specification.new do |s|
   s.date = %q{2008-12-23}
   s.description = %q{One stop shop for launchd property list creation. The doctor is *in*!}
   s.email = ["LaunchDoctor@elliottcable.com"]
-  s.extra_rdoc_files = ["lib/launchdr/launchd.rb", "lib/launchdr/property_list.rb", "lib/launchdr.rb", "README.markdown"]
-  s.files = ["lib/launchdr/launchd.rb", "lib/launchdr/property_list.rb", "lib/launchdr.rb", "Rakefile.rb", "README.markdown", ".manifest", "launchdr.gemspec"]
+  s.extra_rdoc_files = ["lib/launchdr/launchd.rb", "lib/launchdr/property_list.rb", "lib/launchdr/tasks.rb", "lib/launchdr.rb", "README.markdown"]
+  s.files = ["lib/launchdr/launchd.rb", "lib/launchdr/property_list.rb", "lib/launchdr/tasks.rb", "lib/launchdr.rb", "Rakefile.rb", "README.markdown", ".manifest", "launchdr.gemspec"]
   s.has_rdoc = true
   s.homepage = %q{http://github.com/elliottcable/launchdr}
   s.rdoc_options = ["--line-numbers", "--inline-source", "--title", "Launchdr", "--main", "README.markdown"]

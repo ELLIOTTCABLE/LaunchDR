@@ -9,7 +9,7 @@ Usage
 LaunchDoctor is really simple. It is essentially an easy interface to
 [launchd][]'s [property list][plist] files.
 
-There are two ways to use LaunchDoctor - the simplest being directly
+There are three ways to use LaunchDoctor - the simplest being directly
 creating property lists and treating them as hashes:
     
     require 'launchdr'
@@ -40,11 +40,20 @@ true 'Ruby-ish' symbol keys. All of the following are legal:
     plist[:UserName] = "elliottcable"
     plist[:user_name] = "elliottcable"
     
-I, personally, prefer the last one, because I looks more like I'm accessing a
-normal Ruby `Hash`.
+Finally, you can use the Rake task interface to the last method. It simply
+wraps the last method inside a rake task. This method is really great if you
+want to provide a way to let users make your gem's binary run all the time:
+    
+    LaunchDoctor.task :launchd, :bin => 'jello', :arguments => ['-D', 'shortener', 'grabup']
+    
+This isn't very flexible, but it's not very complicated either. If you need
+more control over the plist, just use the second method inside a `task` block.
+This method defaults to making your gem's binary `run_at_load` and be
+`keep_alive` as well, so it won't die.
 
   [plist]: <http://en.wikipedia.org/wiki/Property_list> "Property list on Wikipedia"
   [manpage]: <http://developer.apple.com/DOCUMENTATION/DARWIN/Reference/ManPages/man5/launchd.plist.5.html> "Mac OS X Manual Page for launchd.plist(5)"
+  [rake]: <http://rake.rubyforge.org/> "Rake's RDocs"
 
 Requirements
 ------------
