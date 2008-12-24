@@ -1,3 +1,5 @@
+require 'launchdr'
+
 module LaunchDr
   
   module Task
