@@ -1,6 +1,6 @@
 require 'facets/string'
 
-module LaunchDoctor
+module LaunchDr
   
   class Launchd < PropertyList
     Paths = {

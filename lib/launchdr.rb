@@ -2,10 +2,10 @@ require 'launchdr/property_list'
 require 'launchdr/launchd'
 
 
-def LaunchDoctor label, opts = {}
-  LaunchDoctor.create label, opts, &Proc.new
+def LaunchDr label, opts = {}
+  LaunchDr.create label, opts, &Proc.new
 end
-module LaunchDoctor
+module LaunchDr
   extend self
   
   Version = 0

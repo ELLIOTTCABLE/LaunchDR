@@ -13,15 +13,15 @@ There are three ways to use LaunchDoctor - the simplest being directly
 creating property lists and treating them as hashes:
     
     require 'launchdr'
-    plist = LaunchDoctor::Launchd.new "name.elliottcable.launchdr.test"
+    plist = LaunchDr::Launchd.new "name.elliottcable.launchdr.test"
     plist[:program_arguments] = ['/Applications/Calculator.app/Contents/MacOS/Calculator']
-    plist.dump LaunchDoctor::Launchd::Paths[:user_agent]
+    plist.dump LaunchDr::Launchd::Paths[:user_agent]
     
-The second is to use the common block idiom, provided by the `LaunchDoctor()`
+The second is to use the common block idiom, provided by the `LaunchDr()`
 method:
     
     require 'launchdr'
-    LaunchDoctor "name.elliottcable.launchdr.test" do |plist|
+    LaunchDr "name.elliottcable.launchdr.test" do |plist|
       plist[:program_arguments] = ['/Applications/Calculator.app/Contents/MacOS/Calculator']
     end
     
@@ -44,7 +44,7 @@ Finally, you can use the Rake task interface to the last method. It simply
 wraps the last method inside a rake task. This method is really great if you
 want to provide a way to let users make your gem's binary run all the time:
     
-    LaunchDoctor.task :launchd, :bin => 'jello', :arguments => ['-D', 'shortener', 'grabup']
+    LaunchDr.task :launchd, :bin => 'jello', :arguments => ['-D', 'shortener', 'grabup']
     
 This isn't very flexible, but it's not very complicated either. If you need
 more control over the plist, just use the second method inside a `task` block.

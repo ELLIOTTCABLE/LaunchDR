@@ -1,7 +1,7 @@
 require 'osx/plist'
 require 'uuid'
 
-module LaunchDoctor
+module LaunchDr
   
   class PropertyList
     attr_reader :elements

@@ -2,7 +2,7 @@
 begin 
   require 'launchdr'
 rescue LoadError
-  module LaunchDoctor; Version = -1; end
+  module LaunchDr; Version = -1; end
 end
 
 # =======================
@@ -16,9 +16,9 @@ begin
   task :manifest => :'package:manifest'
   task :clobber => :'package:clobber'
   namespace :package do
-    Echoe.new('launchdr', LaunchDoctor::Version) do |g|
+    Echoe.new('launchdr', LaunchDr::Version) do |g|
       g.author = ['elliottcable']
-      g.email = ['LaunchDoctor@elliottcable.com']
+      g.email = ['launchdr@elliottcable.com']
       g.summary = "One stop shop for launchd property list creation. The doctor is *in*!"
       g.url = 'http://github.com/elliottcable/launchdr'
       g.dependencies = ['kballard-osx-plist', 'facets']
@@ -32,13 +32,13 @@ begin
     desc 'tests packaged files to ensure they are all present'
     task :verify => :package do
       # An error message will be displayed if files are missing
-      if system %(ruby -e "require 'rubygems'; require 'pkg/launchdr-#{LaunchDoctor::Version}/lib/launchdr'")
+      if system %(ruby -e "require 'rubygems'; require 'pkg/launchdr-#{LaunchDr::Version}/lib/launchdr'")
         puts "\nThe library files are present"
       end
     end
   end
   
 rescue LoadError
-  desc 'You need the `elliottcable-echoe` gem to package LaunchDoctor'
+  desc 'You need the `elliottcable-echoe` gem to package LaunchDr'
   task :package
 end
