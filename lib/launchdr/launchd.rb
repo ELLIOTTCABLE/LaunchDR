@@ -16,6 +16,10 @@ module LaunchDoctor
     def [] key
       super(key.to_s.camelcase)
     end
+    
+    def []= key, value
+      super(key.to_s.camelcase, value)
+    end
   end
   
 end
