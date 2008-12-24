@@ -22,6 +22,7 @@ module LaunchDr
     raise "Type error! Must be one of #{Launchd::Paths.keys.join(", ")}" unless path
     
     plist.dump File.expand_path(path)
+    plist.load!
   end
   
   def allow_system_agents!

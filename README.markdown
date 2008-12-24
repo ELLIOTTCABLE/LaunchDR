@@ -25,6 +25,10 @@ method:
       plist[:program_arguments] = ['/Applications/Calculator.app/Contents/MacOS/Calculator']
     end
     
+LaunchDoctor will automatically add the property list to `launchctl`, and then
+start it running. Once you run the above snippet, the target will immediately
+be launched for the first time.
+
 LaunchDoctor can write (`dump`) the property lists to any place on your disk,
 but the idiom method assumes you're going to want to use one of the
 directories that launchd checks for property lists. These are stored in the
