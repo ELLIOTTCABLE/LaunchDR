@@ -14,6 +14,7 @@ begin
   task :package => :'package:package'
   task :install => :'package:install'
   task :manifest => :'package:manifest'
+  task :clobber => :'package:clobber'
   namespace :package do
     Echoe.new('launchdr', LaunchDoctor::Version) do |g|; g.name = 'LaunchDoctor'
       g.project = 'launchdr'
