@@ -22,7 +22,7 @@ begin
       g.summary = "One stop shop for launchd property list creation. The doctor is *in*!"
       g.url = 'http://github.com/elliottcable/launchdr'
       g.dependencies = ['kballard-osx-plist', 'facets']
-      g.development_dependencies = ['elliottcable-echoe >= 3.0.2']
+      g.development_dependencies = ['echoe >= 3.0.2']
       g.manifest_name = '.manifest' # I don't want this showing up <,<
       g.retain_gemspec = true # perfect for GitHub
       g.rakefile_name = 'Rakefile.rb' # It's a Ruby file, why not have .rb?
@@ -39,6 +39,6 @@ begin
   end
   
 rescue LoadError
-  desc 'You need the `elliottcable-echoe` gem to package LaunchDr'
+  desc 'You need the `echoe` gem to package LaunchDr'
   task :package
 end
