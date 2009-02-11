@@ -6,7 +6,7 @@ def LaunchDr label, opts = {}
   LaunchDr.create label, opts, &Proc.new
 end
 module LaunchDr
-  Version = 1
+  Version = 2
   Options = Hash.new
   
   def self.create label, opts = {}
