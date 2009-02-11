@@ -1,9 +1,5 @@
 ($:.unshift File.expand_path(File.join( File.dirname(__FILE__), 'lib' ))).uniq!
-begin 
-  require 'launchdr'
-rescue LoadError
-  module LaunchDr; Version = -1; end
-end
+require 'launchdr'
 
 # =======================
 # = Gem packaging tasks =
