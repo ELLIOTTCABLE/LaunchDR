@@ -13,7 +13,7 @@ module LaunchDr
         unless File.file? path
           path = File.expand_path File.join(Gem::default_bindir, opts[:bin])
           unless File.file? path
-            path = File.expand_path %x[which "#{opts[:bin]}"]
+            path = File.expand_path %x[which "#{opts[:bin]}"].chomp
           end
         end
         unless File.file? path
