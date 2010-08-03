@@ -62,5 +62,5 @@ This method defaults to making your gem's binary `run_at_load` and be
 
 Requirements
 ------------
-- OSX/plist by kballard - `sudo gem install kballard-osx-plist --source=http://gems.github.com/`
-- Ruby Facets - `sudo gem install facets`
+- Plist - `gem install plist`
+- Ruby Facets - `gem install facets`

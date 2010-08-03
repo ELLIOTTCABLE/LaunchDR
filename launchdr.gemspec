@@ -24,18 +24,18 @@ Gem::Specification.new do |s|
     s.specification_version = 2
 
     if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<kballard-osx-plist>, [">= 0"])
+      s.add_runtime_dependency(%q<plist>, [">= 0"])
       s.add_runtime_dependency(%q<facets>, [">= 0"])
       s.add_runtime_dependency(%q<uuid>, [">= 0"])
       s.add_development_dependency(%q<echoe>, [">= 0", "= 3.0.2"])
     else
-      s.add_dependency(%q<kballard-osx-plist>, [">= 0"])
+      s.add_dependency(%q<plist>, [">= 0"])
       s.add_dependency(%q<facets>, [">= 0"])
       s.add_dependency(%q<uuid>, [">= 0"])
       s.add_dependency(%q<echoe>, [">= 0", "= 3.0.2"])
     end
   else
-    s.add_dependency(%q<kballard-osx-plist>, [">= 0"])
+    s.add_dependency(%q<plist>, [">= 0"])
     s.add_dependency(%q<facets>, [">= 0"])
     s.add_dependency(%q<uuid>, [">= 0"])
     s.add_dependency(%q<echoe>, [">= 0", "= 3.0.2"])
