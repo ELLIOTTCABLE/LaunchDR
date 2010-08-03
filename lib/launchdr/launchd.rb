@@ -12,11 +12,11 @@ module LaunchDr
     }
     
     def [] key
-      super(key.to_s.camelcase)
+      super(key.to_s.titlecase.camelcase)
     end
     
     def []= key, value
-      super(key.to_s.camelcase, value)
+      super(key.to_s.titlecase.camelcase, value)
     end
     
     # Adds the property list to `launchctl`'s indexes, and starts it (unless
